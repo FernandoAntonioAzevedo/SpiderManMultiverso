@@ -47,9 +47,9 @@ body::before {
 
 .s-card {
     border: 0.5rem solid white;
-    width: calc(100% / 3 - 8%);
+    width: calc(100vh / 3 - 10%);
     height: 70vh;
-    position: relative;
+    position: absolute;
     transition: filter .5s ease-in-out;
 }
 
@@ -81,11 +81,12 @@ body::before {
 }
 
 .s-controller {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+    bottom: 1.5rem;
 }
 
 .s-controller__button {
@@ -111,6 +112,13 @@ body::before {
 
 .s-controller__button:nth-child(2) {
     margin: 0 3.75rem;
+}
+
+.s-controller__button--active {
+    background-color: white;
+    color: var(--primary-color);
+    border: 0.18rem solid var(--primary-color);
+    outline: 0.125rem solid white;
 }
 
 .s-controller__line {
